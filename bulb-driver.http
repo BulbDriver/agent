@@ -1,0 +1,69 @@
+# Heartbeat
+GET /heartbeat
+Host: localhost:9494
+
+###
+# Status HTML
+GET /status
+Host: localhost:9494
+Content-Type: text/html
+
+###
+# Status JSON
+GET /status
+Host: localhost:9494
+
+###
+# Get the name
+GET /name
+Host: localhost:9494
+
+###
+# Set the name
+PATCH /name?name=My Name
+Host: localhost:9494
+
+###
+# Get the color
+GET /color
+Host: localhost:9494
+
+###
+# Try setting a color with no value
+PATCH /color
+Host: localhost:9494
+
+###
+# Try setting a color with less than three chars
+PATCH /color?color=f0
+Host: localhost:9494
+
+###
+# Set the color Red
+PATCH /color?color=ff1111
+Host: localhost:9494
+
+###
+# Set the color Blue
+PATCH /color?color=1111ff
+Host: localhost:9494
+
+###
+# Set the color Black
+PATCH /color?color=000
+Host: localhost:9494
+
+###
+# Get the brightness
+GET /brightness
+Host: localhost:9494
+
+###
+# Set the brightness to 50
+PATCH /brightness?brightness=50
+Host: localhost:9494
+
+###
+# Get status of the hub
+HEAD /
+Host: localhost:9393
